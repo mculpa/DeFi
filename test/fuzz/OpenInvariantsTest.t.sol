@@ -25,7 +25,7 @@ contract InvariantsTest is StdInvariant, Test {
         targetContract(address(dsce));
     }
 
-    function invariant_protocolMustHaveMoreValueThanTotalSupply() public view {
+    function _invariant_protocolMustHaveMoreValueThanTotalSupply() public view {
         uint256 totalSupply = dsc.totalSupply();
         uint256 totalWethDeposited = IERC20(weth).balanceOf(address(dsce));
         uint256 totalBtcDeposited = IERC20(wbtc).balanceOf(address(dsce));
@@ -35,7 +35,7 @@ contract InvariantsTest is StdInvariant, Test {
 
         console.log("weth value: ", wethValue);
         console.log("wbtc value: ", wbtcValue);
-        console.log("total suply: ", totalSupply);
+        console.log("total supply: ", totalSupply);
 
         assert(wethValue + wbtcValue >= totalSupply);
     }

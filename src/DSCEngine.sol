@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 
-// This is considered an Exogenous, Decentralized, Anchored (pegged), Crypto Collateralized low volitility coin
+// This is considered an Exogenous, Decentralized, Anchored (pegged), Crypto Collateralized low volatility coin
 
 // Layout of Contract:
 // version
@@ -177,7 +177,8 @@ contract DSCEngine is ReentrancyGuard {
         s_dscMinted[msg.sender] += amountDscToMint;
         _revertIfHealthFactorIsBroken(msg.sender);
         bool minted = i_dsc.mint(msg.sender, amountDscToMint);
-        if (!minted) {
+
+        if (minted != true) {
             revert DSCEngine__MintFailed();
         }
     }

@@ -1,3 +1,12 @@
 {
-  "cSpell.words": ["overcollateralized"]
+  "cSpell.words": [
+    "chainlink",
+    "Collateralized",
+    "dsce",
+    "IERC",
+    "overcollateralized",
+    "Reentrancy",
+    "remappings",
+    "undercollateralized"
+  ]
 }
