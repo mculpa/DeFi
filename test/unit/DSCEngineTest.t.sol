@@ -115,5 +115,4 @@ contract DSCEngineTest is Test {
         assertEq(AMOUNT_COLLATERAL, expectedDepositAmount);
     }
     ////// Mint Dsc Test ///////////
-    
 }
